@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video OIKGCW</title>
+
+<style>
+    .grid{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+        width: 40rem;
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+
+    footer{
+        border-top: 4px solid gray;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        width: 37.5rem;
+        text-align: right;
+    }
+
+    div.grid>div{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    button{
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 4;
+        overflow: hidden;
+
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #bdf;
+        box-shadow: 0 0 0 0.125rem black, inset 0 0 0.25rem 0 white
+    }
+
+    button:hover{
+        background-color: #9cf;
+    }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <h1>Videó lejátszása_OIKGCW</h1>
+    </header>
+    <section>
+        <video src="oikgcw_video.mp4" id="video" autoplay="false" controls width="600"></video>
+
+        <div class="grid">
+            <div>
+                <button id="start">
+                    <span class="material-symbols-outlined">
+                        play_arrow
+                    </span>
+                </button>
+                <button id="stop">
+                    <span class="material-symbols-outlined">
+                        stop
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button id="start/stop">
+                    <span class="material-symbols-outlined">
+                        play_pause
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button id="mute">
+                    <span class="material-symbols-outlined">
+                        volume_off
+                    </span>
+                </button>
+                <button id="volume_low">
+                    <span class="material-symbols-outlined">
+                        volume_mute
+                    </span>
+                </button>
+                <button id="loud">
+                    <span class="material-symbols-outlined">
+                        volume_up
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button id="veryslow">
+                    <span class="material-symbols-outlined">
+                        autoplay
+                    </span>
+                </button>
+                <button id="slow">
+                    <span class="material-symbols-outlined">
+                        fast_rewind
+                    </span>
+                </button>
+                <button id="normal">
+                    <span class="material-symbols-outlined">
+                        play_arrow
+                    </span>
+                </button>
+                <button id="fast">
+                    <span class="material-symbols-outlined">
+                        fast_forward
+                    </span>
+                </button>
+                <button id="veryfast">
+                    <span class="material-symbols-outlined">
+                        double_arrow
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button id="small">
+                    <span class="material-symbols-outlined">
+                        photo_size_select_small
+                    </span>
+                </button>
+                <button id="medium">
+                    <span class="material-symbols-outlined">
+                        photo_size_select_large
+                    </span>
+                </button>
+                <button id="large">
+                    <span class="material-symbols-outlined">
+                        photo
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button id="isover">
+                    <span class="material-symbols-outlined">
+                        check
+                    </span>
+                </button>
+                <button id="length_of_the_video_mp">
+                    <span class="material-symbols-outlined">
+                        timer
+                    </span>
+                </button>
+                <button id="current_position">
+                    <span class="material-symbols-outlined">
+                        schedule
+                    </span>
+                </button>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <p>Forrás: <a href="www.w3schools.com/html/html5_video.asp">/www.w3schools.com/html/html5_video.asp</a></p>
+    </footer>
+    <script>
+        let btnClick = (id, onclick) => document.getElementById(id).addEventListener("click", onclick);
+
+        let video = document.querySelector("video");
+
+        btnClick("start", () => video.play());
+        btnClick("stop", () => video.pause());
+        btnClick("start/stop", () => video.paused ? video.play() : video.pause());
+        btnClick("mute", () => video.volume = 0);
+        btnClick("quiet", () => video.volume = 0.3);
+        btnClick("loud", () => video.volume = 1);
+        btnClick("veryslow", () => video.playbackRate = 0.25);
+        btnClick("slow", () => video.playbackRate = 0.5);
+        btnClick("normal", () => video.playbackRate = 1);
+        btnClick("fast", () => video.playbackRate = 1.5);
+        btnClick("veryfast", () => video.playbackRate = 2);
+        btnClick("small", () => video.width = 320);
+        btnClick("medium", () => video.width = 480);
+        btnClick("large", () => video.width = 640);
+        btnClick("isover", () => alert(video.ended ? "A videó véget ért." : "A videó még nem ért véget."));
+        btnClick("length_of_the_video_mp", () => alert(`A videó hossza: ${video.duration} másodperc.`));
+        btnClick("current_position", () => alert(`A videó jelenlegi pozíciója: ${video.currentTime} másodperc.`));
+
+    </script>
+    
+</body>
+</html>
