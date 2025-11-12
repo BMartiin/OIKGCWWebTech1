@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json obj to string</title>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <section>
+        <h1>JSON fájl feldolgozás, beolvasás - JavaScript-ben</h1>
+
+        <h1>JSON:</h1>
+        <p id="oikgcw"></p>
+        <button onclick="olvasas()">JSON beolvasás</button>
+    </section>
+    <footer>
+
+    </footer>
+
+    <script>
+    function olvasas(){
+        const jsonStr = `
+    [
+      {"nev": "HTML5", "kiterjesztes": ".html"},
+      {"nev": "CSS3", "kiterjesztes": ".css"},
+      {"nev": "JavaScript", "kiterjesztes": ".js"}
+    ]`;
+
+    const lista = JSON.stringify(jsonStr);
+
+    let i =0;
+        let szovegkiir="";
+
+        szovegkiir = lista;
+
+        document.getElementById("oikgcw").innerHTML = szovegkiir;
+    }
+    
+    </script>
+</body>
+</html>

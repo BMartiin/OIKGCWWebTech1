@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Text konvertálása JavaScript objektummá!</title>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <section>
+        <h1>JSON Text konvertálása JavaScript objektummá!</h1>
+
+        <div id="jsonRenderer"></div>
+    </section>
+    <footer>
+
+    </footer>
+
+    <script>
+    function olvasas(){
+        const jsonTxt = `{"nev": "Balogh Martin", "iranyitoszam": "3700", "varos": "Kazincbarcika", "egyetem": "Miskolci Egyetem"}`;
+     
+
+    const text = JSON.parse(jsonTxt);
+
+        for(const key in text){
+            const p = document.createElement("p");
+            p.innerHTML = `<span><b>${key}:</b></span> ${text[key]}`;
+            jsonRenderer.appendChild(p);
+        }
+
+    }
+    
+    </script>
+</body>
+</html>
