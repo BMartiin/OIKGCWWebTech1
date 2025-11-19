@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON beágyazott tömb – for-for ciklus</title>
+</head>
+<body>
+
+    <h1>JSON beágyazott tömb – for-for ciklus</h1>
+    <h2>Autók és modelljeik</h2>
+
+    <ul id="lista"></ul>
+
+    <script>
+        // A feladatban megadott JSON objektum
+        const XYObj = {
+            "name": "XY",
+            "age": 22,
+            "cars": [
+                {"name":"Toyota", "models":["CHR", "Corolla", "Proace"]},
+                {"name":"Ford", "models":["Kuga", "Mondeo", "Mustang"]},
+                {"name":"BMW", "models":["320", "X3", "X5"]},
+                {"name": "Fiat", "models": ["500", "Panda", "Tipo"]}
+            ]
+        };
+
+        const lista = document.getElementById("lista");
+
+        // Külső ciklus: autómárkák
+        for (let i = 0; i < XYObj.cars.length; i++) {
+            let car = XYObj.cars[i];
+
+            // A márkanév külön <li> nélkül → nincs előtte lista jel
+            const markaElem = document.createElement("div");
+            markaElem.style.fontWeight = "bold";   // félkövér
+            markaElem.style.marginTop = "10px";
+            markaElem.textContent = car.name;
+            lista.appendChild(markaElem);
+
+            // Belső ciklus: modellek
+            for (let j = 0; j < car.models.length; j++) {
+                const liModell = document.createElement("li");
+                liModell.style.marginLeft = "20px";  // beljebb húzott listaelemek
+                liModell.textContent = car.models[j];
+                lista.appendChild(liModell);
+            }
+        }
+    </script>
+
+</body>
+</html>

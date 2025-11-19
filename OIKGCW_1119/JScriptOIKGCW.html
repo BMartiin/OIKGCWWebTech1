@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>OIKGCW Órarend 2025</title>
+</head>
+<body>
+
+<h1>OIKGCW Órarend 2025</h1>
+
+<button id="loadBtn">Órarend betöltése</button>
+
+<div id="output" style="margin-top:20px;"></div>
+
+<script>
+    document.getElementById("loadBtn").addEventListener("click", function() {
+
+        fetch("orarendOIKGCW.json")
+            .then(response => response.json())
+            .then(data => {
+
+                const out = document.getElementById("output");
+                out.innerHTML = ""; // előző törlése
+
+                const orak = data.OIKGCW_orarend.ora;
+
+                orak.forEach(ora => {
+
+                    // tárgy
+                    const t = document.createElement("p");
+                    t.textContent = "Tárgy: " + ora.targy;
+                    out.appendChild(t);
+
+                    // helyszín
+                    const h = document.createElement("p");
+                    h.textContent = "Helyszín: " + ora.helyszin;
+                    out.appendChild(h);
+
+                    // oktató
+                    const o = document.createElement("p");
+                    o.textContent = "Oktató: " + ora.oktato;
+                    out.appendChild(o);
+
+                    // szak
+                    const sz = document.createElement("p");
+                    sz.textContent = "Szak: " + ora.szak;
+                    out.appendChild(sz);
+
+                    // időpont (nap - tól - ig)
+                    const id = document.createElement("p");
+                    id.textContent = "Időpont: " + 
+                        ora.idopont.nap + " " +
+                        ora.idopont.tol + ":00 - " + 
+                        ora.idopont.ig + ":00";
+                    out.appendChild(id);
+
+                    out.appendChild(document.createElement("hr"));
+                });
+
+            })
+            .catch(err => {
+                document.getElementById("output").textContent = "Hiba történt: " + err;
+            });
+
+    });
+</script>
+
+</body>
+</html>

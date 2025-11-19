@@ -1,0 +1,50 @@
+{
+    "OIKGCW_orarend": {
+        "ora": [
+            {
+                "targy": "Szoftvertechnológia",
+                "idopont": {
+                    "nap": "Hétfő",
+                    "tol": "10",
+                    "ig": "12"
+                },
+                "helyszin": "Inf. 103",
+                "oktato": "Dr. Mileff Péter",
+                "szak": "G3BIW"
+            },
+            {
+                "targy": "Mesterséges Intelligencia",
+                "idopont": {
+                    "nap": "Kedd",
+                    "tol": "12",
+                    "ig": "14"
+                },
+                "helyszin": "A/1 218",
+                "oktato": "Dr. Kovács László",
+                "szak": "G3BIW"
+            },
+            {
+                "targy": "Adatbányászat",
+                "idopont": {
+                    "nap": "Szerda",
+                    "tol": "8",
+                    "ig": "10"
+                },
+                "helyszin": "Inf. 105",
+                "oktato": "Dr. Varga Beatrix",
+                "szak": "G3BIW"
+            },
+            {
+                "targy": "Webtechnológiák 1",
+                "idopont": {
+                    "nap": "Csütörtök",
+                    "tol": "14",
+                    "ig": "16"
+                },
+                "helyszin": "Inf. 102",
+                "oktato": "Dr. XY",
+                "szak": "G3BIW"
+            }
+        ]
+    }
+}
