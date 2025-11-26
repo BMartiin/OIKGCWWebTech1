@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEPTUNKOD_5</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Saját script -->
+    <script src="5.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .btn-row {
+            margin-bottom: 10px;
+        }
+
+        .btn-row button {
+            margin-right: 5px;
+        }
+
+        .bekezdes {
+            margin: 5px 0;
+        }
+
+        #box-container {
+            margin-top: 15px;
+            height: 250px;          /* legyen hely az animációnak */
+            position: relative;
+            border: 1px dashed #ccc;
+        }
+
+        /* A négyzet / téglalap – BALRÓL induljon */
+        #animBox {
+            position: absolute;
+            left: 0px;              /* kiinduló állapot – balról indul */
+            top: 0px;
+            width: 300px;
+            height: 60px;
+            background-color: #4a90e2;
+            color: #fff;
+            font-size: 12pt;        /* kiinduló */
+            line-height: 60px;
+            text-align: center;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>jQuery – 3. Task</h1>
+
+    <!-- Három gomb a bekezdések felett -->
+    <div class="btn-row" id="topButtons">
+        <button id="startAnim">Animáció indítása</button>
+        <button id="hideParas">Bekezdés elrejtése</button>
+        <button id="toggleBox">Összecsuk / Kinyit</button>
+    </div>
+
+    <!-- Bekezdések -->
+    <p class="bekezdes" id="p1">Első bekezdés – jQuery animáció gyakorlása.</p>
+    <p class="bekezdes" id="p2">Második bekezdés – doboz mozgatása téglalap pályán.</p>
+    <p class="bekezdes" id="p3">Harmadik bekezdés – összecsukás, kinyitás, pozícióváltás.</p>
+
+    <!-- Doboz, színkitöltéssel -->
+    <div id="box-container">
+        <div id="animBox">ME GEIK – PTI</div>
+    </div>
+
+</body>
+</html>

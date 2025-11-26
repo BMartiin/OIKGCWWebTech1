@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OIKGCW_4</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Saját script -->
+    <script src="4.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #formBox {
+            background-color: #eef;
+            padding: 10px;
+            margin-top: 15px;
+            width: 260px;
+        }
+        #formBox input {
+            padding: 5px;
+            margin: 3px 0;
+            width: 95%;
+        }
+        #formBox button {
+            margin-top: 6px;
+        }
+        .bekezdes {
+            margin-bottom: 8px;
+        }
+        .btn-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>jQuery – 2. Task</h1>
+
+    <!-- 3 bekezdés -->
+    <p class="bekezdes" id="p1">Ez az első bekezdés – JavaScript és jQuery gyakorlása.</p>
+    <p class="bekezdes" id="p2">Ez a második bekezdés – DOM műveletek, eseménykezelés.</p>
+    <p class="bekezdes" id="p3">Ez a harmadik bekezdés – elrejtés, megjelenítés, áttetszőség.</p>
+
+    <!-- Bekezdések gombjai (űrlap felett) -->
+    <div class="btn-group">
+        <button id="pHide">Elrejt</button>
+        <button id="pShow">Megjelenít</button>
+        <button id="pToggle">Elrejt / Megjelenít</button>
+    </div>
+
+    <!-- Űrlap dobozban, háttérszínnel -->
+    <div id="formBox">
+        <h3>Jelentkezési űrlap</h3>
+        <form>
+            <label>Név:</label><br>
+            <input type="text" id="nev"><br>
+
+            <label>Email:</label><br>
+            <input type="email" id="email"><br>
+
+            <label>Telefonszám:</label><br>
+            <input type="text" id="tel"><br>
+
+            <button type="button" id="jelentkezes">Jelentkezés</button>
+        </form>
+    </div>
+
+    <!-- Áttetszőség gombok (űrlap alatt) -->
+    <div class="btn-group">
+        <button id="op01">Áttetszőség = 0.1</button>
+        <button id="op05">Áttetszőség = 0.5</button>
+        <button id="op08">Áttetszőség = 0.8</button>
+    </div>
+
+    <!-- Űrlap elrejt/megjel. gombok (ez alatt) -->
+    <div class="btn-group">
+        <button id="fHide">Elrejt</button>
+        <button id="fShow">Megjelenít</button>
+        <button id="fToggle">Elrejt / Megjelenít</button>
+    </div>
+
+</body>
+</html>
