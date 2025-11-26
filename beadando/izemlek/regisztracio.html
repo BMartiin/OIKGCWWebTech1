@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Ízemlék – Regisztráció</title>
+</head>
+<body>
+  
+  <header class="hero-header">
+    <div class="light-bar"></div>
+    <div class="hero-inner">
+      <h1 id="mainTitle">Regisztráció</h1>
+      <p id="subtitle">
+        Csak pár lépés, és máris csatlakozhatsz az Ízemlékek közösségéhez!
+      </p>
+    </div>
+  </header>
+
+  <section class="container py-4">
+      <!-- Regisztrációs űrlap -->
+      <div class="col-12 col-md-10 col-lg-8 mx-auto">
+        <div class="formCard">
+          <h2 class="formTitle mb-3">Regisztrációs adatok</h2>
+
+          <form id="regForm" novalidate>
+            <!-- Teljes név -->
+            <div class="formRow">
+              <label for="name" class="formLabel">Teljes név</label>
+              <input type="text" id="name" name="name" class="formInput" placeholder="Pl.: Kiss Anna" required>
+              <small class="errorMsg" id="nameError"></small>
+            </div>
+
+            <!-- Felhasználónév -->
+            <div class="formRow">
+              <label for="username" class="formLabel">Felhasználónév</label>
+              <input type="text" id="username" name="username" class="formInput" placeholder="Pl.: izemlek_rajongo" required>
+              <small class="errorMsg" id="usernameError"></small>
+            </div>
+
+            <!-- E-mail -->
+            <div class="formRow">
+              <label for="email" class="formLabel">E-mail cím</label>
+              <input type="email" id="email" name="email" class="formInput" placeholder="valami@pelda.hu" required>
+              <small class="errorMsg" id="emailError"></small>
+            </div>
+
+            <!-- Jelszó -->
+            <div class="formRow">
+              <label for="password" class="formLabel">Jelszó</label>
+              <input type="password" id="password" name="password" class="formInput" placeholder="Min. 6 karakter, legyen benne szám is" required>
+              <small class="errorMsg" id="passwordError"></small>
+            </div>
+
+            <!-- Jelszó ismét -->
+            <div class="formRow">
+              <label for="password2" class="formLabel">Jelszó ismét</label>
+              <input type="password" id="password2" name="password2" class="formInput" placeholder="Ismételd meg a jelszót" required>
+              <small class="errorMsg" id="password2Error"></small>
+            </div>
+
+            <!-- Születési dátum -->
+            <div class="formRow">
+              <label for="birthdate" class="formLabel">Születési dátum</label>
+              <input type="date" id="birthdate" name="birthdate" class="formInput">
+              <small class="errorMsg" id="birthdateError"></small>
+            </div>
+
+            <!-- Heti hány alkalommal főzöl -->
+            <div class="formRow">
+              <label for="cookfreq" class="formLabel">Heti hány alkalommal főzöl?</label>
+              <input
+                type="number"
+                id="cookfreq"
+                name="cookfreq"
+                class="formInput"
+                min="0"
+                max="21"
+                placeholder="Pl.: 3"
+              >
+              <small class="errorMsg" id="cookfreqError"></small>
+            </div>
+
+            <!-- Kedvenc szín az ételekben -->
+            <div class="formRow">
+              <label for="favcolor" class="formLabel">Melyik színt szereted a legjobban az ételekben?</label>
+              <input type="color" id="favcolor" name="favcolor" class="formInput" value="#fe4a49">
+            </div>
+
+            <!-- Főzési szint (rádió) -->
+            <div class="formRow">
+              <span class="formLabel d-block mb-1">Főzési szinted</span>
+              <div class="formCheck">
+                <label>
+                  <input type="radio" name="skill" value="kezdo"> Kezdő
+                </label>
+              </div>
+              <div class="formCheck">
+                <label>
+                  <input type="radio" name="skill" value="halado"> Haladó
+                </label>
+              </div>
+              <div class="formCheck">
+                <label>
+                  <input type="radio" name="skill" value="profi"> Profi
+                </label>
+              </div>
+              <small class="errorMsg" id="skillError"></small>
+            </div>
+
+            <!-- Kedvenc konyhatípus (select) -->
+            <div class="formRow">
+              <label for="kitchen" class="formLabel">Kedvenc konyhatípus</label>
+              <select id="kitchen" name="kitchen" class="formInput">
+                <option value="">Válassz...</option>
+                <option value="magyar">Magyar</option>
+                <option value="olasz">Olasz</option>
+                <option value="ázsiai">Ázsiai</option>
+                <option value="mexikói">Mexikói</option>
+                <option value="egyéb">Egyéb / vegyes</option>
+              </select>
+            </div>
+
+            <!-- Kedvenc alapanyag (datalist) -->
+            <div class="formRow">
+              <label for="favIngredient" class="formLabel">Kedvenc alapanyagod</label>
+              <input list="alapanyagok" id="favIngredient" name="favIngredient" class="formInput" placeholder="Pl.: fokhagyma">
+              <datalist id="alapanyagok">
+                <option value="Fokhagyma">
+                <option value="Hagyma">
+                <option value="Paradicsom">
+                <option value="Csirkehús">
+                <option value="Sajt">
+              </datalist>
+            </div>
+
+            <!-- Rövid bemutatkozás (textarea) -->
+            <div class="formRow">
+              <label for="about" class="formLabel">Röviden magadról</label>
+              <textarea id="about" name="about" rows="4" class="formInput" placeholder="Írd le pár mondatban, milyen ízeket szeretsz, mióta főzöl..."></textarea>
+            </div>
+
+            <!-- Checkboxok -->
+            <div class="formRow formRow-inline">
+              <label class="formCheck">
+                <input type="checkbox" id="terms" name="terms">
+                <span>Elfogadom az adatkezelési tájékoztatót</span>
+              </label>
+              <small class="errorMsg" id="termsError"></small>
+            </div>
+
+            <div class="formRow formRow-inline">
+              <label class="formCheck">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <span>Szeretnék hírlevelet kapni az új receptekről</span>
+              </label>
+            </div>
+
+            <!-- Gomb -->
+            <div class="formRow text-center mt-3">
+              <button type="submit" class="action_button">
+                Regisztráció elküldése
+              </button>
+            </div>
+
+            <!-- Visszajelzés -->
+            <p id="formMessage" class="formMessage mt-3"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- JSON előnézet (demó) -->
+      <div class="col-12 col-md-10 col-lg-8 mx-auto mt-3">
+        <div class="jsonPreviewCard">
+          <h3 class="jsonTitle">Beküldött adatok (JSON formátumban – demó)</h3>
+          <pre id="jsonPreview" class="jsonPreview">// Itt fog megjelenni a JSON, ha a regisztráció sikeres.</pre>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Vissza a főoldalra gomb -->
+    <a href="index.html" class="back-home-btn">
+      ⟵ Vissza a főoldalra
+    </a>
+
+  </section>
+
+  <footer class="container py-3">
+    <p class="mb-0" id="footer_stuff">
+      <i>© 2025 Miskolci Egyetem - Balogh Martin OIKGCW - Webtechnológia - Bednarik László</i>
+    </p>
+  </footer>
+
+  <!-- jQuery header animációk -->
+  <script>
+    $(document).ready(function () {
+      // Cím becsúsztatása + halványítás
+      $("#mainTitle")
+        .css({
+          opacity: 0,
+          top: "-20px",
+          position: "relative"
+        })
+        .animate({
+          opacity: 1,
+          top: "0px"
+        }, 800);
+
+      // Alcím késleltetve jelenik meg
+      $("#subtitle")
+        .css({ opacity: 0 })
+        .delay(400)
+        .animate({ opacity: 1 }, 800);
+
+      // Fénycsík folyamatos animációja
+      function animateLightBar() {
+        $(".light-bar")
+          .css({ left: "-40%" })
+          .animate({ left: "110%" }, 2000, "swing", function () {
+            setTimeout(animateLightBar, 1200);
+          });
+      }
+
+      animateLightBar();
+    });
+  </script>
+
+
+  <!-- Regisztrációs JS + JSON -->
+  <script>
+    const regForm         = document.getElementById('regForm');
+
+    const nameInput       = document.getElementById('name');
+    const usernameInput   = document.getElementById('username');
+    const emailInput      = document.getElementById('email');
+    const passwordInput   = document.getElementById('password');
+    const password2Input  = document.getElementById('password2');
+    const birthdateInput  = document.getElementById('birthdate');
+    const cookfreqInput   = document.getElementById('cookfreq');
+    const favcolorInput   = document.getElementById('favcolor');
+    const kitchenSelect   = document.getElementById('kitchen');
+    const favIngredient   = document.getElementById('favIngredient');
+    const aboutTextarea   = document.getElementById('about');
+    const termsCheck      = document.getElementById('terms');
+    const newsletterCheck = document.getElementById('newsletter');
+
+    const nameError       = document.getElementById('nameError');
+    const usernameError   = document.getElementById('usernameError');
+    const emailError      = document.getElementById('emailError');
+    const passwordError   = document.getElementById('passwordError');
+    const password2Error  = document.getElementById('password2Error');
+    const birthdateError  = document.getElementById('birthdateError');
+    const cookfreqError   = document.getElementById('cookfreqError');
+    const skillError      = document.getElementById('skillError');
+    const termsError      = document.getElementById('termsError');
+
+    const formMessage     = document.getElementById('formMessage');
+    const jsonPreview     = document.getElementById('jsonPreview');
+
+    // ===== KORLÁTOK BEÁLLÍTÁSA (SZÜL. DÁTUM, FŐZÉSSZÁM) =====
+
+    // Születési dátum max = mai nap (HTML szinten is)
+    if (birthdateInput) {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const todayStr = `${yyyy}-${mm}-${dd}`;
+      birthdateInput.setAttribute('max', todayStr);
+    }
+
+    // Heti főzésszám: input közben clamp 0–21 közé
+    if (cookfreqInput) {
+      cookfreqInput.addEventListener('input', () => {
+        if (cookfreqInput.value === '') return;
+        let n = Number(cookfreqInput.value);
+        if (isNaN(n)) {
+          cookfreqInput.value = '';
+          return;
+        }
+        if (n < 0) n = 0;
+        if (n > 21) n = 21;
+        cookfreqInput.value = n;
+      });
+    }
+
+    // ===== VALIDÁCIÓ =====
+
+    function clearErrors() {
+      [
+        nameError, usernameError, emailError, passwordError,
+        password2Error, birthdateError, cookfreqError,
+        skillError, termsError
+      ].forEach(el => { if (el) el.textContent = ''; });
+
+      document.querySelectorAll('.formInput, .formCheck input')
+        .forEach(el => el.classList.remove('input-error'));
+
+      formMessage.textContent = '';
+      formMessage.classList.remove('ok','error');
+    }
+
+    function validateEmail(email) {
+      const pattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      return pattern.test(email);
+    }
+
+    regForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      clearErrors();
+      let isValid = true;
+
+      // Név
+      if (!nameInput.value.trim()) {
+        nameError.textContent = 'A név megadása kötelező.';
+        nameInput.classList.add('input-error');
+        isValid = false;
+      }
+
+      // Felhasználónév
+      if (!usernameInput.value.trim()) {
+        usernameError.textContent = 'A felhasználónév megadása kötelező.';
+        usernameInput.classList.add('input-error');
+        isValid = false;
+      } else if (!/^[a-zA-Z0-9_]{3,}$/.test(usernameInput.value.trim())) {
+        usernameError.textContent = 'Legalább 3 karakter, csak betű, szám, aláhúzás.';
+        usernameInput.classList.add('input-error');
+        isValid = false;
+      }
+
+      // Email
+      if (!emailInput.value.trim()) {
+        emailError.textContent = 'Az e-mail megadása kötelező.';
+        emailInput.classList.add('input-error');
+        isValid = false;
+      } else if (!validateEmail(emailInput.value.trim())) {
+        emailError.textContent = 'Kérlek érvényes e-mail címet adj meg.';
+        emailInput.classList.add('input-error');
+        isValid = false;
+      }
+
+      // Jelszó
+      const pwd = passwordInput.value;
+      if (!pwd) {
+        passwordError.textContent = 'A jelszó megadása kötelező.';
+        passwordInput.classList.add('input-error');
+        isValid = false;
+      } else if (pwd.length < 6 || !/\d/.test(pwd)) {
+        passwordError.textContent = 'Min. 6 karakter, és tartalmazzon számot is.';
+        passwordInput.classList.add('input-error');
+        isValid = false;
+      }
+
+      // Jelszó ismét
+      if (!password2Input.value) {
+        password2Error.textContent = 'Kérlek ismételd meg a jelszót.';
+        password2Input.classList.add('input-error');
+        isValid = false;
+      } else if (passwordInput.value !== password2Input.value) {
+        password2Error.textContent = 'A két jelszó nem egyezik.';
+        password2Input.classList.add('input-error');
+        isValid = false;
+      }
+
+      // Születési dátum – opcionális, de ha van, ne legyen jövőbeli
+      if (birthdateInput.value) {
+        const selected = new Date(birthdateInput.value);
+        const today = new Date();
+        // csak a dátum részt hasonlítjuk (idő nélkül)
+        selected.setHours(0,0,0,0);
+        today.setHours(0,0,0,0);
+
+        if (selected > today) {
+          birthdateError.textContent = 'A születési dátum nem lehet a jövőben.';
+          birthdateInput.classList.add('input-error');
+          isValid = false;
+        }
+      }
+
+      // Heti főzésszám – opcionális, de ha van, 0–21
+      if (cookfreqInput.value) {
+        const n = Number(cookfreqInput.value);
+        if (isNaN(n) || n < 0 || n > 21) {
+          cookfreqError.textContent = '0 és 21 közötti számot adj meg.';
+          cookfreqInput.classList.add('input-error');
+          isValid = false;
+        }
+      }
+
+      // Főzési szint – kötelező
+      const skillChecked = document.querySelector('input[name="skill"]:checked');
+      if (!skillChecked) {
+        skillError.textContent = 'Válaszd ki a főzési szintedet.';
+        isValid = false;
+      }
+
+      // Adatkezelés elfogadása
+      if (!termsCheck.checked) {
+        termsError.textContent = 'A regisztrációhoz el kell fogadnod az adatkezelést.';
+        termsCheck.classList.add('input-error');
+        isValid = false;
+      }
+
+      if (!isValid) {
+        formMessage.textContent = 'Kérlek javítsd a pirossal jelzett hibákat.';
+        formMessage.classList.add('error');
+        return;
+      }
+
+      // Ha minden oké: JSON objektum (jelszó NEM kerül bele)
+      const userData = {
+        nev: nameInput.value.trim(),
+        felhasznalonev: usernameInput.value.trim(),
+        email: emailInput.value.trim(),
+        szuletesiDatum: birthdateInput.value || null,
+        hetiFozes: cookfreqInput.value ? Number(cookfreqInput.value) : null,
+        kedvencSzin: favcolorInput.value,
+        fozesiSzint: skillChecked ? skillChecked.value : null,
+        kedvencKonyha: kitchenSelect.value || null,
+        kedvencAlapanyag: favIngredient.value.trim() || null,
+        bemutatkozas: aboutTextarea.value.trim() || null,
+        hirlevelFeliratkozas: newsletterCheck.checked,
+        regDatum: new Date().toISOString()
+      };
+
+      const jsonStr = JSON.stringify(userData, null, 2);
+
+      formMessage.textContent = 'Sikeres “virtuális” regisztráció – lásd a JSON-t lent ☺';
+      formMessage.classList.add('ok');
+
+      jsonPreview.textContent = jsonStr;
+      // regForm.reset();  // ha üríteni akarod a formot, vedd ki a kommentet
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

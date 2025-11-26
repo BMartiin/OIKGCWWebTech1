@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <title>Ízemlék</title>
+</head>
+<body>
+
+    <!-- HEADER KÉP -->
+    <header>
+        <img src="img/header.jpg" alt="Header" class="header-hero">
+    </header>
+
+    <!-- MOBIL MENÜ ÉS FIÓK GOMBOK -->
+    <div class="mobile-controls d-lg-none px-3 d-flex justify-content-between mt-3">
+        <button class="btn btn-danger" id="openMenu">Menü</button>
+        <button class="btn btn-danger" id="openAccount">Fiók</button>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row gx-3 gy-4 align-items-stretch">
+
+            <!-- BAL OLDALI SIDEBAR -->
+            <aside class="col-lg-3 d-none d-lg-block">
+                <div class="sidebar h-100 p-3">
+
+                    <h4 class="mb-3">Ízemlék — Menü</h4>
+
+                    <ul class="menuPoints">
+                        <li><a href="recept.html">Receptek</a></li>
+                        <li><a href="video.html">Videók</a></li>
+                        <li><a href="receptfeltoltes.html">Recept feltöltés</a></li>
+                        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                    </ul>
+                  
+                </div>
+            </aside>
+
+            <!-- KÖZÉP – FŐ TARTALOM -->
+            <section class="col-12 col-lg-6">
+                <div class="welcomeBlock h-100">
+                    <h1 class="title text-center">Üdv az Ízemlékek oldalán!</h1>
+                    <p class="normLet">Mindenkinek vannak ízemlékei. A nagymamája húslevese, a szomszéd néni süteménye vagy épp a menzás paradicsomos húsgomóc, aminek otthon valahogy sosem volt ugyan olyan az íze. Ennek az oldalnak az a célja, hogy felelevenítse ezeket az ízemlékeket és lehetőséget adjon arra, hogy emberek megosszák egymást közt a receptjeiket. Ezen az oldalon megtalálhatod azokat az ételeket, amiket eddig kerestél, de már nem találtad sehol a receptjét vagy épp olyan fogásokba is bele botolhatsz, amiket már elfelejtettél, de valamikor szeretted. Tégy egy utazást te is az ízemlékeid közt!</p>
+                </div>
+            </section>
+
+            <!-- JOBB OLDALI FIÓK PANEL -->
+            <aside class="col-lg-3 d-none d-lg-block">
+                <div class="sidebar h-100 p-3">
+                    <h4 class="menu_title mb-3">Bejelentkezés</h4>
+
+                    <label>E-mail</label>
+                    <input type="email" class="form-control mb-2" placeholder="pelda@valami.hu">
+
+                    <label>Jelszó</label>
+                    <input type="password" class="form-control mb-3" placeholder="******">
+
+                    <!-- HOZZÁADVA: login-btn class -->
+                    <button class="action_button btn-info w-100 mb-2 login-btn">Belépés</button>
+                    <!-- HOZZÁADVA: forgot-link class -->
+                    <a href="#" class="text-light forgot-link">Elfelejtett jelszó</a>
+
+                    <hr>
+
+                    <button class="reg_button btn-warning w-100 mt-2">Regisztráció</button>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- MOBIL MENÜ PANEL -->
+    <div id="mobileMenu" class="mobile-panel d-lg-none">
+        <div class="mobile-inner">
+            <h3>Menü</h3>
+            <ul class="menuPoints">
+                <li><a href="recept.html">Receptek</a></li>
+                <li><a href="video.html">Videók</a></li>
+                <li><a href="receptfeltoltes.html">Recept feltöltés</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            </ul>
+            <button class="action_button">Kezdjük el!</button>
+            <button class="close_button btn btn-secondary w-100 mt-3 closeMobile">Bezárás</button>
+        </div>
+    </div>
+
+    <!-- MOBIL FIÓK PANEL -->
+    <div id="mobileAccount" class="mobile-panel d-lg-none">
+        <div class="mobile-inner">
+            <h3>Bejelentkezés</h3>
+
+            <label>E-mail</label>
+            <input type="email" class="form-control mb-2" placeholder="pelda@valami.hu">
+
+            <label>Jelszó</label>
+            <input type="password" class="form-control mb-3" placeholder="******">
+
+            <!-- HOZZÁADVA: login-btn class -->
+            <button class="action_button login-btn">Belépés</button>
+            <button class="reg_button">Regisztráció</button>
+
+            <button class="close_button btn btn-secondary w-100 closeMobile">Bezárás</button>
+        </div>
+    </div>
+
+    <footer class="container py-3">
+        <p class="mb-0" id="footer_stuff"> 
+            <i>© 2025 Miskolci Egyetem - Balogh Martin OIKGCW - Webtechnológia - Bednarik László</i>
+        </p>
+    </footer>
+
+    <script>
+        // Mobil menü
+        document.getElementById('openMenu').onclick = () => {
+            document.getElementById('mobileMenu').classList.add('open');
+        };
+        document.getElementById('openAccount').onclick = () => {
+            document.getElementById('mobileAccount').classList.add('open');
+        };
+        document.querySelectorAll('.closeMobile').forEach(btn => {
+            btn.onclick = () => {
+                document.getElementById('mobileMenu').classList.remove('open');
+                document.getElementById('mobileAccount').classList.remove('open');
+            };
+        });
+
+        // Regisztráció gombok linkelése
+        document.querySelectorAll('.reg_button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                window.location.href = 'regisztracio.html';
+            });
+        });
+
+        // 🔔 Belépés + Elfelejtett jelszó figyelmeztetés
+        const warningMessage = 'Ez a funkció jelenleg még nem elérhető. A bejelentkezés fejlesztés alatt áll.';
+
+        // Minden "Belépés" gomb (desktop + mobil)
+        document.querySelectorAll('.login-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert(warningMessage);
+            });
+        });
+
+        // "Elfelejtett jelszó" link (desktop)
+        document.querySelectorAll('.forgot-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Az elfelejtett jelszó funkció jelenleg nem elérhető.');
+            });
+        });
+    </script>
+
+</body>
+</html>
