@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS mértékegységek - rem</title>
+
+    <style>
+        html {
+            font-size: 16px; /* alap méret mindenhol */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 2rem; /* mindig 32px */
+            color: #2a2a2a;
+        }
+
+        .doboz {
+            border: 2px solid #555;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+        }
+
+        .kiemelt {
+            font-size: 1.8rem;
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS – rem mértékegység</h1>
+
+    <div class="doboz">
+        <p class="kiemelt">Ez egy kiemelt szöveg (1.8rem – mindig root alapú).</p>
+        <p>A rem egység nem függ a szülő elem méretétől, csak a root HTML betűméretétől.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS mértékegységek - em</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px; /* alap */
+        }
+
+        h1 {
+            font-size: 2em; /* 2 × body = 32px */
+            color: #333;
+        }
+
+        .kontener {
+            border: 2px solid #888;
+            padding: 1em;
+            margin: 1em 0;
+        }
+
+        .kontener p {
+            font-size: 1.2em; /* 1.2 × konténer relatív mérete */
+            line-height: 1.5em;
+        }
+
+        .kisebb {
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        .nagyobb {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS – em mértékegység</h1>
+
+    <div class="kontener">
+        <p class="nagyobb">Ez egy nagyobb méretű szöveg (1.5em).</p>
+        <p class="kisebb">Ez pedig egy kisebb méretű szöveg (0.8em).</p>
+        <p>Itt látható, hogyan viselkednek a betűméretek konténeren belül.</p>
+    </div>
+
+</body>
+</html>

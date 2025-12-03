@@ -1,0 +1,41 @@
+/* Alapszínek, háttér, betűk */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+/* Táblázat formázása */
+.table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: white;
+    font-size: 18px;
+}
+
+.table th, .table td {
+    border: 2px solid #555;
+    padding: 10px;
+}
+
+/* Osztálykijelölések */
+.red {
+    background-color: #ffb3b3;
+}
+
+.baige {
+    background-color: #f5e4c1;
+}
+
+.magenta {
+    background-color: #ffccff;
+}
+
+.scroll {
+    overflow: auto;
+}
+
+.center {
+    text-align: center;
+}
