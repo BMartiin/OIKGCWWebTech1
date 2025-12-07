@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>OIKGCW – 4. Task – Egyszerű számológép</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f3;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background: #ffffff;
+            width: 350px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #aaa;
+        }
+
+        .sor {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        input[type="number"] {
+            width: 180px;
+            padding: 5px;
+        }
+
+        .muveletek label {
+            width: auto;
+        }
+
+        #szamol {
+            padding: 8px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #eredmeny {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>OIKGCW – Egyszerű számológép</h1>
+
+    <form id="calcForm">
+        <div class="sor">
+            <label for="szam1">Első szám:</label>
+            <input type="number" id="szam1" name="szam1">
+        </div>
+
+        <div class="sor">
+            <label for="szam2">Második szám:</label>
+            <input type="number" id="szam2" name="szam2">
+        </div>
+
+        <div class="sor muveletek">
+            <span>Művelet:</span><br>
+            <label><input type="radio" name="muvelet" value="osszeadas"> Összeadás</label><br>
+            <label><input type="radio" name="muvelet" value="kivonas"> Kivonás</label><br>
+            <label><input type="radio" name="muvelet" value="szorzas"> Szorzás</label><br>
+            <label><input type="radio" name="muvelet" value="osztas"> Osztás</label>
+        </div>
+
+        <button type="button" id="szamol">Számol</button>
+
+        <div id="eredmeny"></div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="oikgcw_4.js"></script>
+</body>
+</html>

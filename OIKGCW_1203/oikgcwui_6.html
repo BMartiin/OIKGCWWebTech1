@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>OIKGCW – 7. Task – jQuery UI feladatok</title>
+
+    <!-- jQuery UI CSS (helyi mappából) -->
+    <link rel="stylesheet" href="jquery-ui-1.14.1/jquery-ui.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f3;
+            padding: 30px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        section {
+            width: 80%;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #aaa;
+        }
+
+        /* 1. feladat rész (doboz animáció + UI) */
+        #animGombok button {
+            margin: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        #box {
+            background: #0d6efd;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+            border-radius: 10px;
+            margin: 20px auto;
+            position: relative;
+            left: 300px;
+            width: 300px;
+            height: 80px;
+            font-size: 12pt;
+            box-shadow: 0 0 10px #555;
+        }
+
+        /* 2. feladat rész (számológép + UI) */
+        #calcForm {
+            width: 320px;
+            margin: 20px auto;
+        }
+
+        #calcForm .sor {
+            margin-bottom: 12px;
+        }
+
+        #calcForm label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        #calcForm input[type="number"],
+        #calcForm input.hasSpinner {
+            width: 150px;
+        }
+
+        #calcForm button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        #eredmenySzoveg {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>OIKGCW – 7. Task – jQuery UI</h1>
+
+    <!-- 1. rész: a 3. Task továbbfejlesztve jQuery UI-val -->
+    <section id="feladat1">
+        <h2>1. rész – Doboz animáció jQuery UI-vel</h2>
+
+        <div id="animGombok">
+            <button id="startAnim">Animáció indítása</button>
+            <button id="resetBox">Alaphelyzet</button>
+        </div>
+
+        <p class="center">
+            A doboz <b>draggable</b> (fogd meg és mozgasd), <b>resizable</b> (átméretezhető),
+            az animáció végén pedig jQuery UI <b>bounce</b> effektet kap.
+        </p>
+
+        <div id="box">
+            ME GEIK – PTI
+        </div>
+    </section>
+
+    <!-- 2. rész: a 4. Task (számológép) továbbfejlesztve jQuery UI-val -->
+    <section id="feladat2">
+        <h2>2. rész – Számológép jQuery UI-vel</h2>
+
+        <form id="calcForm">
+            <div class="sor">
+                <label for="szam1">Első szám:</label>
+                <input type="number" id="szam1" class="hasSpinner">
+            </div>
+
+            <div class="sor">
+                <label for="szam2">Második szám:</label>
+                <input type="number" id="szam2" class="hasSpinner">
+            </div>
+
+            <div class="sor">
+                <span>Művelet:</span><br>
+                <label><input type="radio" name="muvelet" value="osszeadas"> Összeadás</label><br>
+                <label><input type="radio" name="muvelet" value="kivonas"> Kivonás</label><br>
+                <label><input type="radio" name="muvelet" value="szorzas"> Szorzás</label><br>
+                <label><input type="radio" name="muvelet" value="osztas"> Osztás</label>
+            </div>
+
+            <button type="button" id="szamol">Számol</button>
+
+            <div id="eredmenySzoveg"></div>
+        </form>
+
+        <!-- jQuery UI dialog az eredményhez -->
+        <div id="eredmenyDialog" title="Számítás eredménye" style="display:none;">
+            <p id="eredmenyDialogSzoveg"></p>
+        </div>
+    </section>
+
+    <!-- jQuery (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery UI (helyi mappából) -->
+    <script src="jquery-ui-1.14.1/jquery-ui.js"></script>
+
+    <!-- Saját kód -->
+    <script src="oikgcwui_6.js"></script>
+</body>
+</html>

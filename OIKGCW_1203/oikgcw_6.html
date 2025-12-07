@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>OIKGCW – 6. Task – Doboz eltávolítása, DIV-ek kiürítése</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f3;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #kontener {
+            width: 70%;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #aaa;
+        }
+
+        #gombSor {
+            margin-bottom: 20px;
+        }
+
+        #gombSor button {
+            margin: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .torolheto {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f5f5f5;
+        }
+
+        #doboz {
+            background: #0d6efd;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>OIKGCW – 6. Task</h1>
+
+    <div id="kontener">
+
+        <div id="gombSor">
+            <button id="btnRemoveBox">Doboz eltávolítása</button>
+            <button id="btnClearDivs">DIV elemek kiürítése</button>
+        </div>
+
+        <!-- Ez a fő doboz, amit el kell távolítani -->
+        <div id="doboz" class="torolheto">
+            Ez a fő DOBOZ szövege. (ME GEIK – PTI)
+        </div>
+
+        <!-- További div-ek, amelyeket ki lehet üríteni -->
+        <div id="info1" class="torolheto">
+            Ez egy másik DIV szövegének a helye.
+        </div>
+
+        <div id="info2" class="torolheto">
+            Még egy DIV – ezt is kiüríti a második gomb.
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="oikgcw_6.js"></script>
+</body>
+</html>

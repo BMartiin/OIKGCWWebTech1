@@ -1,0 +1,81 @@
+{
+    "kurzus": [
+        {
+            "targy": "Web technológiák 1",
+            "idopont": {
+                "nap": "Hétfő",
+                "tol": "10:00",
+                "ig": "11:30"
+            },
+            "helyszin": "Inf/101",
+            "oktato": "Dr. Bednarik László",
+            "szak": "MI, PTI",
+            "tipus": "Ea."
+        },
+        {
+            "targy": "Web technológiák 1",
+            "idopont": {
+                "nap": "Kedd",
+                "tol": "12:00",
+                "ig": "13:30"
+            },
+            "helyszin": "Inf/103",
+            "oktato": "Dr. Bednarik László",
+            "szak": "MI, PTI",
+            "tipus": "Gyk."
+        },
+        {
+            "targy": "Web technológiák 1",
+            "idopont": {
+                "nap": "Szerda",
+                "tol": "12:00",
+                "ig": "13:30"
+            },
+            "helyszin": "Inf/101",
+            "oktato": "Dr. Bednarik László",
+            "szak": "MI, PTI",
+            "tipus": "Gyk."
+        },
+        {
+            "targy": "Web technológiák 1",
+            "idopont": {
+                "nap": "Csütörtök",
+                "tol": "8:00",
+                "ig": "9:30"
+            },
+            "helyszin": "Inf/201",
+            "oktato": "Dr. Bednarik László",
+            "szak": "MI, PTI",
+            "tipus": "Konz."
+        },
+        {
+            "targy": "Web technológiák 1",
+            "idopont": {
+                "nap": "Péntek",
+                "tol": "10:00",
+                "ig": "11:30"
+            },
+            "helyszin": "Inf/101",
+            "oktato": "Dr. Bednarik László",
+            "szak": "MI, PTI",
+            "tipus": "Gyk."
+        }
+    ],
+
+    "cim": {
+        "iranyitoszam": 3515,
+        "varos": "Miskolc",
+        "utca": "Egyetemváros"
+    },
+
+    "telefonszam": [
+        {
+            "tipus": "Vezetékes",
+            "szam": "0646 555-125"
+        },
+        {
+            "tipus": "Mobil",
+            "szam": "0670 555-4567"
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>OIKGCW – 3. Task – jQuery animáció</title>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f3;
+    padding: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#szovegter {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.bekezdes {
+    margin-bottom: 10px;
+}
+
+#box {
+    background: #0d6efd;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
+    left: 300px;
+    width: 300px;
+    height: 80px;
+    font-size: 12pt;
+    box-shadow: 0 0 10px #555;
+}
+
+</style>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="oikgcw_style.css">
+
+    <h1 class="center">OIKGCW – 3. Task – jQuery animáció</h1>
+
+    <div class="center" id="gombok">
+        <button id="startAnim">Animáció indítása</button>
+        <button id="hidePara">Bekezdés elrejtése</button>
+        <button id="toggleBox">Összecsuk / Kinyit</button>
+    </div>
+
+    <div id="szovegter">
+        <p class="bekezdes">
+            Ez az első bekezdés, amely a jQuery animációs feladat része.
+        </p>
+        <p class="bekezdes">
+            A második bekezdés szintén el fog tűnni a „Bekezdés elrejtése” gombra kattintva.
+        </p>
+        <p class="bekezdes">
+            A doboz a bekezdések alatt helyezkedik el, és különböző animációkat hajt végre.
+        </p>
+    </div>
+
+    <!-- A doboz a bekezdések alatt, színkitöltéssel -->
+    <div id="box">
+        ME GEIK – PTI
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="oikgcw_3.js"></script>
+</body>
+</html>

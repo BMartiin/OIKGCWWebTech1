@@ -1,0 +1,33 @@
+{
+    "kurzus": [
+        {
+            "targy": "Web technológiák 1",
+            "idopont": {
+                "nap": "Szerda",
+                "tol": "12:00",
+                "ig": "13:30"
+            },
+            "helyszin": "Inf/101",
+            "oktato": "Dr. Bednarik László",
+            "szak": "MI, PTI",
+            "tipus": "Gyk."
+        }
+    ],
+
+    "cim": {
+        "iranyitoszam": 3515,
+        "varos": "Miskolc",
+        "utca": "Egyetemváros"
+    },
+
+    "telefonszam": [
+        {
+            "tipus": "Vezetékes",
+            "szam": "0646 555-125"
+        },
+        {
+            "tipus": "Mobil",
+            "szam": "0670 555-4567"
+        }
+    ]
+}
