@@ -1,0 +1,120 @@
+{
+  "recipes": [
+    {
+      "name": "Citromos-fokhagymás sült csirke zöldségekkel",
+      "category": "főétel",
+      "cuisine": "mediterrán",
+      "timeMinutes": 70,
+      "difficulty": "közepes",
+      "image": "img/csirke_sult.jpg",
+      "ingredients": [
+        "1 kg csirkecomb (felső vagy alsó)",
+        "3 ek olívaolaj",
+        "1 db citrom leve és reszelt héja",
+        "4 gerezd fokhagyma",
+        "3-4 közepes sárgarépa",
+        "4-5 közepes burgonya",
+        "1 fej vöröshagyma",
+        "só, bors, rozmaring, kakukkfű"
+      ],
+      "description": "A csirkecombokat megmossuk, szárazra töröljük, majd sózzuk, borsozzuk. Az olívaolajat, a citrom levét és reszelt héját, a zúzott fokhagymát és a fűszereket összekeverjük, és a csirkére öntjük. A zöldségeket nagyobb darabokra vágjuk, tepsibe tesszük, ráfektetjük a csirkét, majd 180 °C-on kb. 60–70 perc alatt pirosra sütjük."
+    },
+    {
+      "name": "Gombapaprikás házi galuskával",
+      "category": "főétel",
+      "cuisine": "magyar",
+      "timeMinutes": 50,
+      "difficulty": "közepes",
+      "image": "img/gombapaprikas.jpg",
+      "ingredients": [
+        "50 dkg csiperke gomba",
+        "1 fej vöröshagyma",
+        "2 ek olaj vagy zsír",
+        "1 ek pirospaprika",
+        "2 dl tejföl",
+        "1 ek liszt",
+        "só, bors",
+        "30 dkg liszt (galuskához)",
+        "2 db tojás (galuskához)",
+        "víz, só (galuskához)"
+      ],
+      "description": "A hagymát apróra vágjuk, olajon üvegesre pirítjuk, majd lehúzzuk a tűzről, hozzáadjuk a pirospaprikát. Rádobjuk a szeletelt gombát, sózzuk, borsozzuk, és fedő alatt puhára pároljuk. A tejfölt a liszttel simára keverjük, a gombára öntjük, összeforraljuk. A galuskához a lisztet, tojást, sót és kevés vizet összekeverjük, galuskaszaggatóval forró, sós vízbe szaggatjuk, majd a kész gombapaprikással tálaljuk."
+    },
+    {
+      "name": "Rántott sajt petrezselymes burgonyával",
+      "category": "vegetáriánus főétel",
+      "cuisine": "magyar",
+      "timeMinutes": 40,
+      "difficulty": "könnyű",
+      "image": "img/rantott_sajt.jpg",
+      "ingredients": [
+        "40 dkg trappista sajt tömbben",
+        "10 dkg liszt",
+        "2 db tojás",
+        "15 dkg zsemlemorzsa",
+        "olaj a sütéshez",
+        "60 dkg burgonya",
+        "2-3 ek vaj vagy margarin",
+        "1 csokor friss petrezselyem",
+        "só"
+      ],
+      "description": "A sajtot ujjnyi szeletekre vágjuk, lisztbe, felvert tojásba, majd zsemlemorzsába forgatjuk. Forró olajban aranybarnára sütjük. A burgonyát sós vízben megfőzzük, leszűrjük, vajjal és apróra vágott petrezselyemmel összeforgatjuk. A rántott sajtot a petrezselymes burgonyával és tetszőleges mártogatóssal tálaljuk."
+    },
+    {
+      "name": "Csicseriborsó curry kókusztejjel",
+      "category": "vegán főétel",
+      "cuisine": "indiai",
+      "timeMinutes": 35,
+      "difficulty": "könnyű",
+      "image": "img/csicseri_curry.jpg",
+      "ingredients": [
+        "1 konzerv csicseriborsó (kb. 40 dkg)",
+        "1 db vöröshagyma",
+        "2 gerezd fokhagyma",
+        "1 ek curry por",
+        "1 tk őrölt kömény",
+        "1 konzerv kókusztej (4 dl)",
+        "2 ek olaj",
+        "só, bors",
+        "friss koriander vagy petrezselyem",
+        "főtt rizs a tálaláshoz"
+      ],
+      "description": "A hagymát és fokhagymát finomra vágjuk, olajon megdinszteljük. Hozzáadjuk a curry port és a köményt, röviden megpirítjuk, majd beleöntjük a leöblített csicseriborsót és a kókusztejet. Sózzuk, borsozzuk, 15–20 percig lassú tűzön főzzük, hogy kissé besűrűsödjön. Főtt rizzsel és friss zöldfűszerekkel tálaljuk."
+    },
+    {
+      "name": "Caprese saláta balzsamecetes öntettel",
+      "category": "előétel",
+      "cuisine": "olasz",
+      "timeMinutes": 15,
+      "difficulty": "nagyon könnyű",
+      "image": "img/caprese.jpg",
+      "ingredients": [
+        "2 db nagy érett paradicsom",
+        "200 g mozzarella sajt",
+        "friss bazsalikomlevelek",
+        "3 ek extra szűz olívaolaj",
+        "1-2 ek balzsamecet",
+        "só, frissen őrölt bors"
+      ],
+      "description": "A paradicsomot és a mozzarellát karikákra vágjuk, felváltva tányérra vagy tálra rendezzük. Közéjük friss bazsalikomleveleket teszünk. Meglocsoljuk olívaolajjal és balzsamecettel, majd enyhén megsózzuk, megborsozzuk. Azonnal tálalható friss bagettel."
+    },
+    {
+      "name": "Gyors tiramisu pohárkrém",
+      "category": "desszert",
+      "cuisine": "olasz",
+      "timeMinutes": 25,
+      "difficulty": "könnyű",
+      "image": "img/tiramisu_pohar.jpg",
+      "ingredients": [
+        "25 dkg mascarpone",
+        "2 dl habtejszín",
+        "2 ek porcukor",
+        "1 csomag babapiskóta",
+        "2 dl erős feketekávé (kihűtve)",
+        "1-2 ek rum vagy mandulaaroma (elhagyható)",
+        "kakaópor a szóráshoz"
+      ],
+      "description": "A hideg tejszínt kemény habbá verjük, hozzákeverjük a mascarponét és a porcukrot. A kihűlt kávét ízlés szerint rummal vagy aromával ízesítjük. A babapiskótát darabokra törjük, röviden a kávéba mártjuk, és poharak aljába tesszük. Rákanalazzuk a krém egy részét, majd ismét kávés piskóta következik. A tetejére krém kerül, végül kakaóporral meghintjük. Fogyasztás előtt legalább 1 órát hűtőben pihentetjük."
+    }
+  ]
+}
