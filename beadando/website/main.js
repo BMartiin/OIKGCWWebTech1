@@ -15,7 +15,7 @@ document.querySelectorAll('.closeMobile').forEach(btn => {
 // Regisztráció gombok linkelése
 document.querySelectorAll('.reg_button').forEach(btn => {
     btn.addEventListener('click', () => {
-        window.location.href = 'regisztracio.html';
+        window.location.href = 'registration.html';
     });
 });
 
