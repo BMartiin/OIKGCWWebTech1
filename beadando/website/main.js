@@ -19,7 +19,7 @@ document.querySelectorAll('.reg_button').forEach(btn => {
     });
 });
 
-// 🔔 Belépés + Elfelejtett jelszó figyelmeztetés
+// Belépés + Elfelejtett jelszó figyelmeztetés
 const warningMessage = 'Ez a funkció jelenleg még nem elérhető. A bejelentkezés fejlesztés alatt áll.';
 
 // Minden "Belépés" gomb (desktop + mobil)
